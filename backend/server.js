@@ -7,6 +7,7 @@ dotenv.config()
 
 
 const app = express(); // Creating an instance of an Express application
+app.use(express.json()); // For parsing application/json
 
 connectDB()
 
