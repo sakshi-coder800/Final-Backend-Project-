@@ -2,13 +2,15 @@ import express from "express";
 import colors from 'colors';   
 import dotenv from 'dotenv'; 
 import connectDB from "./config/db.js";
-
+import authRoute from './routes/authRoutes.js'
 dotenv.config()
 
 
 const app = express(); // Creating an instance of an Express application
 
 connectDB()
+
+app.use('/api/v1/auth',authRoute)
 // Define a route for the root URL
 app.get("/", (req, res) => {
     res.send("hii"); // Sending a response when the root URL is accessed
