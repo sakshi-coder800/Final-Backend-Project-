@@ -53,8 +53,8 @@ export const registerController = async (req, res) => {
 
 // Login controller
 export const loginController = async (req, res) => {
+
 };
 
 // Test controller
-export const testController = (req, res) => {
-};
+export const testController = (req, res) => {};
